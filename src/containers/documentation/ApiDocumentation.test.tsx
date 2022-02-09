@@ -22,7 +22,7 @@ const api: APIDescription = {
   lastProdAccessStep: ProdAccessFormSteps.Three,
   name: 'My API',
   openData: false,
-  releaseNotes: ReleaseNotes,
+  releaseNotes: ReleaseNotes.toString(),
   urlFragment: 'my_api',
   vaInternalOnly: false,
 };

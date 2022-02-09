@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import AlertBox from '@department-of-veterans-affairs/component-library/AlertBox';
 import classNames from 'classnames';
+import ReactMarkdown from 'react-markdown';
 import { Flag } from '../../flags';
 import { getApiDefinitions } from '../../apiDefs/query';
 import { APIDescription } from '../../apiDefs/schema';
@@ -64,7 +65,7 @@ const CategoryPage = (): JSX.Element => {
         </AlertBox>
       )}
       <div className="vads-u-width--full">
-        {overview({})}
+        <ReactMarkdown>{overview}</ReactMarkdown>
         <p>
           <Link to={CONSUMER_PATH}>{consumerDocsLinkText}</Link>.
         </p>

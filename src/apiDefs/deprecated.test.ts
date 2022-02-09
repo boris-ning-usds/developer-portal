@@ -15,7 +15,7 @@ describe('deprecated API module', () => {
     name: 'My API',
     oAuth: false,
     openData: false,
-    releaseNotes: UrgentCareDeprecationNotice,
+    releaseNotes: UrgentCareDeprecationNotice.toString(),
     urlFragment: 'my_api',
     vaInternalOnly: false,
   };

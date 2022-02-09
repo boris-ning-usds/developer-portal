@@ -13,13 +13,18 @@
  * - schema.ts
  */
 
-import apiDefs, { apiCategoryOrder } from './data/categories';
-import { isApiDeactivated } from './deprecated';
+import store from '../store';
 import { isHostedApiEnabled } from './env';
+import { isApiDeactivated } from './deprecated';
 import { APICategories, APICategory, APIDescription } from './schema';
 
-const getApiDefinitions = (): APICategories => apiDefs;
-const getApiCategoryOrder = (): string[] => apiCategoryOrder;
+const getApiDefinitions = (): APICategories => {
+  const state = store.getState();
+  return state.apiList.apis;
+};
+
+const getApiCategoryOrder = (): string[] =>
+  Object.keys(getApiDefinitions());
 
 const getActiveApiDefinitions = (): APICategories => {
   const output: APICategories = {};
@@ -39,7 +44,7 @@ const getActiveApiDefinitions = (): APICategories => {
 };
 
 const getAllApis = (): APIDescription[] =>
-  Object.values(getApiDefinitions()).flatMap((category: APICategory) => category.apis)
+  Object.values(getActiveApiDefinitions()).flatMap((category: APICategory) => category.apis)
     .sort((a, b) => (a.name > b.name ? 1 : -1));
 
 const getAllOauthApis = (): APIDescription[] =>
@@ -68,7 +73,7 @@ const lookupApiByFragment = (apiKey: string): APIDescription | null => {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- should check category existence
-const lookupApiCategory = (categoryKey: string): APICategory | null => apiDefs[categoryKey] ?? null;
+const lookupApiCategory = (categoryKey: string): APICategory | null => getApiDefinitions()[categoryKey] ?? null;
 
 const apisFor = (apiList: string[]): APIDescription[] => {
   const allApis = getAllApis();

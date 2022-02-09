@@ -7,6 +7,9 @@ import { makeRequest } from '../../../../utils/makeRequest';
 import { getAllKeyAuthApis, getAllOauthApis } from '../../../../apiDefs/query';
 import { APIDescription } from '../../../../apiDefs/schema';
 import { FlagsProvider, getFlags } from '../../../../flags';
+import { setApis } from '../../../../actions';
+import store from '../../../../store';
+import apiDefs from '../../../../apiDefs/data/categories';
 import { isApiDeactivated } from '../../../../apiDefs/deprecated';
 import { isHostedApiEnabled } from '../../../../apiDefs/env';
 import { SandboxAccessForm } from './SandboxAccessForm';
@@ -18,6 +21,8 @@ jest.mock('../../../../utils/makeRequest', () => ({
 
 const mockOnSuccess = jest.fn();
 const mockMakeRequest = makeRequest as jest.Mock;
+
+store.dispatch(setApis(apiDefs));
 
 const allOauthApis = getAllOauthApis()
   .filter(

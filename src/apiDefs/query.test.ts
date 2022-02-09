@@ -22,6 +22,9 @@ import {
   VeteranConfirmationReleaseNotes,
   VeteranVerificationReleaseNotes,
 } from '../content/apiDocs/verification';
+import { setApis } from '../actions';
+import store from '../store';
+import apiDefs from './data/categories';
 import {
   apisFor,
   getAllQuickstartCategorySlugs,
@@ -46,7 +49,7 @@ const facilities: APIDescription = {
   lastProdAccessStep: ProdAccessFormSteps.Two,
   name: 'VA Facilities API',
   openData: true,
-  releaseNotes: FacilitiesReleaseNotes,
+  releaseNotes: FacilitiesReleaseNotes.toString(),
   urlFragment: 'facilities',
   vaInternalOnly: false,
   veteranRedirect: {
@@ -83,7 +86,7 @@ const claims: APIDescription = {
   },
   oAuthTypes: ['AuthorizationCodeGrant', 'ClientCredentialsGrant'],
   openData: false,
-  releaseNotes: ClaimsReleaseNotes,
+  releaseNotes: ClaimsReleaseNotes.toString(),
   urlFragment: 'claims',
   vaInternalOnly: false,
   veteranRedirect: {
@@ -107,7 +110,7 @@ const confirmation: APIDescription = {
   lastProdAccessStep: ProdAccessFormSteps.Four,
   name: 'Veteran Confirmation API',
   openData: false,
-  releaseNotes: VeteranConfirmationReleaseNotes,
+  releaseNotes: VeteranConfirmationReleaseNotes.toString(),
   urlFragment: 'veteran_confirmation',
   vaInternalOnly: false,
 };
@@ -141,12 +144,14 @@ const verification: APIDescription = {
   },
   oAuthTypes: ['AuthorizationCodeGrant'],
   openData: false,
-  releaseNotes: VeteranVerificationReleaseNotes,
+  releaseNotes: VeteranVerificationReleaseNotes.toString(),
   urlFragment: 'veteran_verification',
   vaInternalOnly: false,
 };
 
 describe('query module', () => {
+  store.dispatch(setApis(apiDefs));
+
   describe('lookupApiByFragment', () => {
     it('finds the API if it is defined', () => {
       const api = lookupApiByFragment('facilities');

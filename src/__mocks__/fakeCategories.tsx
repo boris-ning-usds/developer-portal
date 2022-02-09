@@ -14,14 +14,7 @@ export const fakeCategories: APICategories = {
         lastProdAccessStep: ProdAccessFormSteps.Four,
         name: 'Rings API',
         openData: false,
-        releaseNotes: (): JSX.Element => (
-          <div>
-            <h3>March 25, 2020</h3>
-            <p>One Ring destroyed</p>
-            <h3>June 10, 2019</h3>
-            <p>One Ring discovered by Bilbo in Misty Mountains</p>
-          </div>
-        ),
+        releaseNotes: '### March 25, 2020\n\nOne Ring destroyed\n\n\n---\n\n### June 10, 2019\n\nOne Ring discovered by Bilbo in Misty Mountains\n',
         urlFragment: 'rings',
         vaInternalOnly: false,
       },
@@ -38,14 +31,7 @@ export const fakeCategories: APICategories = {
         lastProdAccessStep: ProdAccessFormSteps.Three,
         name: 'Silmarils API',
         openData: false,
-        releaseNotes: (): JSX.Element => (
-          <div>
-            <h3>April 3, 1005</h3>
-            <p>Stolen by Morgoth</p>
-            <h3>December 1, 0215</h3>
-            <p>Feanor created the jewels</p>
-          </div>
-        ),
+        releaseNotes: '### April 3, 1005\n\nStolen by Morgoth\n\n\n---\n\n### December 1, 0215\n\nFeanor created the jewels\n',
         urlFragment: 'silmarils',
         vaInternalOnly: false,
       },
@@ -56,21 +42,14 @@ export const fakeCategories: APICategories = {
         lastProdAccessStep: ProdAccessFormSteps.Two,
         name: 'Hobbits API',
         openData: false,
-        releaseNotes: (): JSX.Element => (
-          <div>
-            <h3>September 22, 2019</h3>
-            <p>Pippin and Merry got taller</p>
-            <h3>June 11, 2019</h3>
-            <p>Bilbo disappeared</p>
-          </div>
-        ),
+        releaseNotes: '### September 22, 2019\n\nPippin and Merry got taller\n\n\n---\n\n### June 11, 2019\n\nBilbo disappeared\n',
         urlFragment: 'hobbits',
         vaInternalOnly: false,
       },
     ],
     content: {
       consumerDocsLinkText: 'Take me to the consumer docs!',
-      overview: (): JSX.Element | null => null,
+      overview: '',
       shortDescription: 'Learn more about things in Middle-earth',
     },
     name: 'LOTR API',
@@ -85,14 +64,7 @@ export const fakeCategories: APICategories = {
         lastProdAccessStep: ProdAccessFormSteps.Three,
         name: 'Basketball API',
         openData: false,
-        releaseNotes: (): JSX.Element => (
-          <div>
-            <h3>September 21, 2019</h3>
-            <p>Moved exiled Numenoreans to Middle-earth</p>
-            <h3>June 12, 2019</h3>
-            <p>Released our API</p>
-          </div>
-        ),
+        releaseNotes: '### September 21, 2019\n\nMoved exiled Numenoreans to Middle-earth\n\n\n---\n\n### June 12, 2019\n\nReleased our API\n',
         urlFragment: 'basketball',
         vaInternalOnly: false,
       },
@@ -103,21 +75,14 @@ export const fakeCategories: APICategories = {
         lastProdAccessStep: ProdAccessFormSteps.Three,
         name: 'Baseball API',
         openData: false,
-        releaseNotes: (): JSX.Element => (
-          <div>
-            <h3>September 22, 2019</h3>
-            <p>Mike Trout homers</p>
-            <h3>June 11, 2019</h3>
-            <p>Gerrit Cole strikes out 80</p>
-          </div>
-        ),
+        releaseNotes: '### September 22, 2019\n\nMike Trout homers\n\n\n---\n\n### June 11, 2019\n\nGerrit Cole strikes out 80\n',
         urlFragment: 'baseball',
         vaInternalOnly: false,
       },
     ],
     content: {
       consumerDocsLinkText: 'Take me to the consumer docs!',
-      overview: (): JSX.Element | null => null,
+      overview: '',
       shortDescription: 'Learn more about throwing, running, and hitting',
     },
     name: 'Sports API',
@@ -136,14 +101,7 @@ export const extraAPI: APIDescription = {
   lastProdAccessStep: ProdAccessFormSteps.Four,
   name: 'Soccer API',
   openData: false,
-  releaseNotes: () => (
-    <div>
-      <h3>October 22, 2019</h3>
-      <p>a lot of goals get scored</p>
-      <h3>August 11, 2019</h3>
-      <p>champions league</p>
-    </div>
-  ),
+  releaseNotes: '### October 22, 2019\n\na lot of goals get scored\n\n\n---\n\n### August 11, 2019\n\nchampions league\n',
   urlFragment: 'soccer',
   vaInternalOnly: false,
 };

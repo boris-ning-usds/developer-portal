@@ -5,7 +5,7 @@ import DecisionReviewReleaseNotes from './decisionReviewReleaseNotes.mdx';
 
 const appealsContent: APICategoryContent = {
   consumerDocsLinkText: 'Read the consumer onboarding guide for getting production access',
-  overview: AppealsOverview,
+  overview: AppealsOverview.toString(),
   shortDescription: 'Enables managing benefit decision appeals on behalf of a Veteran.',
 };
 

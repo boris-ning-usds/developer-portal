@@ -4,6 +4,7 @@ import thunk, { ThunkMiddleware } from 'redux-thunk';
 
 import { oAuthApiSelection } from './reducers/oAuthApiSelection';
 import { apiVersioning } from './reducers/apiVersioning';
+import { apiList } from './reducers/apiList';
 import { RootState } from './types';
 
 export const history: History = createBrowserHistory({
@@ -12,6 +13,7 @@ export const history: History = createBrowserHistory({
 
 const store = createStore(
   combineReducers<RootState>({
+    apiList,
     apiVersioning,
     oAuthApiSelection,
   }),

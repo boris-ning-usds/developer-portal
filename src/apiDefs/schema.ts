@@ -16,9 +16,9 @@ export interface VeteranRedirectMessage {
 
 export interface APICategoryContent {
   readonly consumerDocsLinkText: string;
-  readonly overview: React.FunctionComponent;
+  readonly overview: string;
   readonly shortDescription: string;
-  readonly quickstart?: React.FunctionComponent;
+  readonly quickstart?: string;
   readonly veteranRedirect?: VeteranRedirectMessage;
 }
 
@@ -35,7 +35,7 @@ export interface APIDocSource {
   readonly openApiUrl: string;
   readonly key?: string;
   readonly label?: string;
-  readonly apiIntro?: React.FunctionComponent;
+  readonly apiIntro?: string;
 }
 
 export const ApiDocSourcePropType = PropTypes.shape({
@@ -80,9 +80,9 @@ export interface APIDescription {
   readonly oAuth?: boolean;
   readonly oAuthTypes?: string[];
   readonly oAuthInfo?: OAuthInfo;
-  readonly releaseNotes: React.FunctionComponent;
+  readonly releaseNotes: string;
   readonly deactivationInfo?: APIDeactivationInfo;
-  readonly multiOpenAPIIntro?: React.FunctionComponent;
+  readonly multiOpenAPIIntro?: string;
   readonly veteranRedirect?: VeteranRedirectMessage;
   readonly altID?: string;
   readonly lastProdAccessStep: ProdAccessFormSteps;

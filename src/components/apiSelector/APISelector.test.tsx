@@ -30,7 +30,7 @@ const options: APIDescription[] = [
     },
     oAuthTypes: ['AuthorizationCodeGrant'],
     openData: false,
-    releaseNotes: ClaimsReleaseNotes,
+    releaseNotes: ClaimsReleaseNotes.toString(),
     urlFragment: 'claims',
     vaInternalOnly: false,
   },

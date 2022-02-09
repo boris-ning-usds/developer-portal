@@ -42,7 +42,7 @@ describe('env module', () => {
       lastProdAccessStep: ProdAccessFormSteps.Four,
       name: 'My API',
       openData: false,
-      releaseNotes: ClaimsReleaseNotes,
+      releaseNotes: ClaimsReleaseNotes.toString(),
       vaInternalOnly: false,
     };
 

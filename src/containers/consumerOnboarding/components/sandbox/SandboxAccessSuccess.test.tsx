@@ -1,10 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 import { MemoryRouter } from 'react-router';
+import { setApis } from '../../../../actions';
+import store from '../../../../store';
+import apiDefs from '../../../../apiDefs/data/categories';
 
 import { SandboxAccessSuccess } from './SandboxAccessSuccess';
 
 describe('SandboxAccessSuccess with results', () => {
+  store.dispatch(setApis(apiDefs));
+
   describe('with results', () => {
     describe('all apis', () => {
       beforeEach(() => {

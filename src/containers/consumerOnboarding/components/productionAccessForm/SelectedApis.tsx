@@ -4,8 +4,6 @@ import { ErrorMessage, useFormikContext } from 'formik';
 import { ApiCheckboxList } from '../../../../components';
 import { getAllApis } from '../../../../apiDefs/query';
 
-const allApis = getAllApis();
-
 const SelectedAPIs = (): JSX.Element => {
   const { errors } = useFormikContext();
   const checkboxName = 'apis';
@@ -56,7 +54,7 @@ const SelectedAPIs = (): JSX.Element => {
         >
           <ErrorMessage name="apis" />
         </div>
-        <ApiCheckboxList apis={allApis} />
+        <ApiCheckboxList apis={getAllApis()} />
       </div>
     </fieldset>
   );

@@ -17,7 +17,7 @@ const facilitiesApis: APIDescription[] = [
     lastProdAccessStep: ProdAccessFormSteps.Two,
     name: 'VA Facilities API',
     openData: true,
-    releaseNotes: FacilitiesReleaseNotes,
+    releaseNotes: FacilitiesReleaseNotes.toString(),
     urlFragment: 'facilities',
     vaInternalOnly: false,
     veteranRedirect: facilitiesContent.veteranRedirect,

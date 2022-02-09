@@ -3,6 +3,7 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { useDispatch } from 'react-redux';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
+import ReactMarkdown from 'react-markdown';
 import { Link } from 'react-router-dom';
 import * as actions from '../../actions';
 import { APIDescription, ApiDescriptionPropType, APIDocSource } from '../../apiDefs/schema';
@@ -92,7 +93,8 @@ const ApiDocumentation = (props: ApiDocumentationProps): JSX.Element => {
         <SwaggerDocs docSource={apiDefinition.docSources[0]} apiName={apiDefinition.urlFragment} />
       ) : (
         <>
-          {apiDefinition.multiOpenAPIIntro?.({})}
+          {apiDefinition.multiOpenAPIIntro !== undefined &&
+            <ReactMarkdown>{apiDefinition.multiOpenAPIIntro}</ReactMarkdown>}
           <Tabs selectedIndex={tabIndex} onSelect={onTabSelect}>
             <TabList aria-label={`${apiDefinition.name} implementations`}>
               {apiDefinition.docSources.map(apiDocSource => (

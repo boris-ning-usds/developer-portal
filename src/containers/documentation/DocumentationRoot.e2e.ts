@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
+
 import 'jest';
 import { getDocument, queries } from 'pptr-testing-library';
-
 import { puppeteerHost } from '../../e2eHelpers';
 
 describe('position sticky', () => {

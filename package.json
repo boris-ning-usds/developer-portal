@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://developer.va.gov/",
+  "proxy": "http://localhost:8080/",
   "scripts": {
     "preinstall": "npx npm-force-resolutions@0.0.10",
     "start": "node scripts/start.js",
@@ -12,11 +13,11 @@
     "test:unit": "node scripts/test.js --projects=unit.jest.config.js",
     "test:unit:ci": "node scripts/test.js --projects=unit.jest.config.js --ci --testResultsProcessor=\"./node_modules/jest-junit-reporter\" --runInBand --coverage",
     "test:e2e": "node scripts/test.js --projects=e2e.jest.config.js",
-    "test:e2e:ci": "node scripts/test.js --projects=e2e.jest.config.js --ci --testResultsProcessor=\"./node_modules/jest-junit-reporter\" --runInBand",
+    "test:e2e:ci": "./scripts/test.sh --projects=e2e.jest.config.js --ci --testResultsProcessor=\"./node_modules/jest-junit-reporter\" --runInBand",
     "test:monitoring": "node scripts/test.js --projects=e2e.jest.config.js --testMatch='<rootDir>/src/App.e2e.ts'",
     "test:accessibility": "node scripts/test.js --projects=e2e.jest.config.js --testMatch='<rootDir>/src/**/?(*.)(accessibility).(j|t)s?(x)' --runInBand",
-    "test:accessibility:ci": "node scripts/test.js --projects=e2e.jest.config.js --testMatch='<rootDir>/src/**/?(*.)(accessibility).(j|t)s?(x)' --ci --testResultsProcessor='./node_modules/jest-junit-reporter' --forceExit --runInBand",
-    "test:visual": "node scripts/test.js --projects=visual.jest.config.js --runInBand --ci",
+    "test:accessibility:ci": "./scripts/test.sh --projects=e2e.jest.config.js --testMatch='<rootDir>/src/**/?(*.)(accessibility).(j|t)s?(x)' --ci --testResultsProcessor='./node_modules/jest-junit-reporter' --forceExit --runInBand",
+    "test:visual": "./scripts/test.sh --projects=visual.jest.config.js --runInBand --ci",
     "test:coverage": "node scripts/test.js --coverage "
   },
   "dependencies": {

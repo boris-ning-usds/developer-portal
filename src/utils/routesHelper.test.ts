@@ -28,7 +28,7 @@ describe('API category and definition routes', () => {
         content: {
           ...fakeCategories.lotr.content,
           // Add a quickstart
-          quickstart: (): JSX.Element | null => null,
+          quickstart: 'quickstart content here',
         },
       },
     };

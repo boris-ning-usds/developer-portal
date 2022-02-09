@@ -7,7 +7,7 @@ import ClaimsReleaseNotes from './claimsReleaseNotes.mdx';
 
 const benefitsContent: APICategoryContent = {
   consumerDocsLinkText: 'Read the consumer onboarding guide for getting production access',
-  overview: BenefitsOverview,
+  overview: BenefitsOverview.toString(),
   shortDescription:
     'Enables approved organizations to submit benefits-related PDFs and access information on a Veteran’s behalf.',
   veteranRedirect: {

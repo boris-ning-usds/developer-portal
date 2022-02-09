@@ -17,7 +17,7 @@ const vaFormsApis: APIDescription[] = [
     lastProdAccessStep: ProdAccessFormSteps.Two,
     name: 'VA Forms API',
     openData: true,
-    releaseNotes: VAFormsReleaseNotes,
+    releaseNotes: VAFormsReleaseNotes.toString(),
     urlFragment: 'vaForms',
     vaInternalOnly: false,
     veteranRedirect: vaFormsContent.veteranRedirect,

@@ -29,7 +29,7 @@ const loanGuarantyApis: APIDescription[] = [
     },
     oAuthTypes: ['ClientCredentialsGrant'],
     openData: false,
-    releaseNotes: GuarantyRemittanceReleaseNotes,
+    releaseNotes: GuarantyRemittanceReleaseNotes.toString(),
     urlFragment: 'lgy_guaranty_remittance',
     vaInternalOnly: false,
   },
@@ -44,7 +44,7 @@ const loanGuarantyApis: APIDescription[] = [
     lastProdAccessStep: ProdAccessFormSteps.Three,
     name: 'Loan Guaranty API',
     openData: false,
-    releaseNotes: LoanGuarantyReleaseNotes,
+    releaseNotes: LoanGuarantyReleaseNotes.toString(),
     urlFragment: 'loan_guaranty',
     /**
      * technically Loan Guaranty is what's known as "trusted partner only", but the business case

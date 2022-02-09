@@ -99,7 +99,7 @@ describe('SupportContactUsFormPublishing', () => {
             });
             await waitFor(() => {
               expect(mockMakeRequest).toHaveBeenCalledWith(
-                'http://fake.va.gov/internal/developer-portal/public/contact-us',
+                '/internal/developer-portal/public/contact-us',
                 {
                   body: expect.stringContaining('"email":"fbag@bagend.com"') as unknown,
                   headers: {
@@ -167,7 +167,7 @@ describe('SupportContactUsFormPublishing', () => {
               it('does not submit the form fields from the non-selected form type', async () => {
                 await waitFor(() => {
                   expect(mockMakeRequest).toHaveBeenCalledWith(
-                    'http://fake.va.gov/internal/developer-portal/public/contact-us',
+                    '/internal/developer-portal/public/contact-us',
                     {
                       body: expect.not.stringContaining('"apiDetails":"fake thing"') as unknown,
                       headers: {
@@ -322,7 +322,7 @@ describe('SupportContactUsFormPublishing', () => {
             });
             await waitFor(() => {
               expect(mockMakeRequest).toHaveBeenCalledWith(
-                'http://fake.va.gov/internal/developer-portal/public/contact-us',
+                '/internal/developer-portal/public/contact-us',
                 {
                   body: expect.stringContaining('"email":"fbag@bagend.com"') as unknown,
                   headers: {
@@ -362,7 +362,7 @@ describe('SupportContactUsFormPublishing', () => {
             });
             await waitFor(() => {
               expect(mockMakeRequest).toHaveBeenCalledWith(
-                'http://fake.va.gov/internal/developer-portal/public/contact-us',
+                '/internal/developer-portal/public/contact-us',
                 {
                   body: expect.stringContaining('"email":"fbag@bagend.com"') as unknown,
                   headers: {
