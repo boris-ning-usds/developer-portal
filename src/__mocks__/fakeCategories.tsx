@@ -21,10 +21,10 @@ export const fakeCategories: APICategories = {
         deactivationInfo: {
           deactivationContent: 'Silmarils lost forever',
           deactivationDate: moment().subtract(1, 'year')
-                                    .format('DD.MM.YYYY HH:mm:ss'),
+                                    .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
           deprecationContent: 'Morgoth claims the jewels',
           deprecationDate: moment().subtract(15, 'months')
-                                   .format('DD.MM.YYYY HH:mm:ss'),
+                                   .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
         },
         description: 'Three pretty gems',
         docSources: [],
@@ -110,17 +110,17 @@ export const extraAPI: APIDescription = {
 export const extraDeactivationInfo: APIDeactivationInfo = {
   deactivationContent: 'deactivated this API',
   deactivationDate: moment().subtract(3, 'months')
-                            .format('DD.MM.YYYY HH:mm:ss'),
+                            .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
   deprecationContent: 'deprecated this API',
   deprecationDate: moment().subtract(6, 'months')
-                           .format('DD.MM.YYYY HH:mm:ss'),
+                           .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
 };
 
 export const unmetDeactivationInfo: APIDeactivationInfo = {
   deactivationContent: 'This API is deactivated',
   deactivationDate: moment().add(3, 'months')
-                            .format('DD.MM.YYYY HH:mm:ss'),
+                            .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
   deprecationContent: 'This API is deprecated',
   deprecationDate: moment().add(1, 'year')
-                           .format('DD.MM.YYYY HH:mm:ss'),
+                           .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
 };

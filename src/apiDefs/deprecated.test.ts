@@ -47,10 +47,10 @@ describe('deprecated API module', () => {
         deactivationInfo: {
           deactivationContent: UrgentCareDeprecationNotice.toString(),
           deactivationDate: moment().add(2, 'month')
-                                    .format('DD.MM.YYYY HH:mm:ss'),
+                                    .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
           deprecationContent: UrgentCareDeprecationNotice.toString(),
           deprecationDate: moment().add(1, 'month')
-                                   .format('DD.MM.YYYY HH:mm:ss'),
+                                   .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
         },
       };
 
@@ -63,10 +63,10 @@ describe('deprecated API module', () => {
         deactivationInfo: {
           deactivationContent: UrgentCareDeprecationNotice.toString(),
           deactivationDate: moment().add(2, 'month')
-                                    .format('DD.MM.YYYY HH:mm:ss'),
+                                    .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
           deprecationContent: UrgentCareDeprecationNotice.toString(),
           deprecationDate: moment().add(1, 'month')
-                                   .format('DD.MM.YYYY HH:mm:ss'),
+                                   .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
         },
       };
       expect(isApiDeprecated(api)).toBe(false);
@@ -78,10 +78,10 @@ describe('deprecated API module', () => {
         deactivationInfo: {
           deactivationContent: UrgentCareDeprecationNotice.toString(),
           deactivationDate: moment().add(2, 'month')
-                                    .format('DD.MM.YYYY HH:mm:ss'),
+                                    .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
           deprecationContent: UrgentCareDeprecationNotice.toString(),
           deprecationDate: moment().subtract(1, 'month')
-                                   .format('DD.MM.YYYY HH:mm:ss'),
+                                   .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
         },
       };
       expect(isApiDeprecated(api)).toBe(true);
@@ -93,10 +93,10 @@ describe('deprecated API module', () => {
         deactivationInfo: {
           deactivationContent: UrgentCareDeprecationNotice.toString(),
           deactivationDate: moment().subtract(1, 'month')
-                                    .format('DD.MM.YYYY HH:mm:ss'),
+                                    .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
           deprecationContent: UrgentCareDeprecationNotice.toString(),
           deprecationDate: moment().subtract(2, 'month')
-                                   .format('DD.MM.YYYY HH:mm:ss'),
+                                   .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
         },
       };
       expect(isApiDeprecated(api)).toBe(true);
@@ -118,10 +118,10 @@ describe('deprecated API module', () => {
         deactivationInfo: {
           deactivationContent: UrgentCareDeprecationNotice.toString(),
           deactivationDate: moment().add(2, 'month')
-                                    .format('DD.MM.YYYY HH:mm:ss'),
+                                    .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
           deprecationContent: UrgentCareDeprecationNotice.toString(),
           deprecationDate: moment().add(1, 'month')
-                                   .format('DD.MM.YYYY HH:mm:ss'),
+                                   .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
         },
       };
 
@@ -134,10 +134,10 @@ describe('deprecated API module', () => {
         deactivationInfo: {
           deactivationContent: UrgentCareDeprecationNotice.toString(),
           deactivationDate: moment().add(2, 'month')
-                                    .format('DD.MM.YYYY HH:mm:ss'),
+                                    .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
           deprecationContent: UrgentCareDeprecationNotice.toString(),
           deprecationDate: moment().add(1, 'month')
-                                   .format('DD.MM.YYYY HH:mm:ss'),
+                                   .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
         },
       };
       expect(isApiDeactivated(api)).toBe(false);
@@ -149,10 +149,10 @@ describe('deprecated API module', () => {
         deactivationInfo: {
           deactivationContent: UrgentCareDeprecationNotice.toString(),
           deactivationDate: moment().add(2, 'month')
-                                    .format('DD.MM.YYYY HH:mm:ss'),
+                                    .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
           deprecationContent: UrgentCareDeprecationNotice.toString(),
           deprecationDate: moment().subtract(1, 'month')
-                                   .format('DD.MM.YYYY HH:mm:ss'),
+                                   .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
         },
       };
       expect(isApiDeactivated(api)).toBe(false);
@@ -164,10 +164,10 @@ describe('deprecated API module', () => {
         deactivationInfo: {
           deactivationContent: UrgentCareDeprecationNotice.toString(),
           deactivationDate: moment().subtract(1, 'month')
-                                    .format('DD.MM.YYYY HH:mm:ss'),
+                                    .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
           deprecationContent: UrgentCareDeprecationNotice.toString(),
           deprecationDate: moment().subtract(2, 'month')
-                                   .format('DD.MM.YYYY HH:mm:ss'),
+                                   .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
         },
       };
       expect(isApiDeactivated(api)).toBe(true);

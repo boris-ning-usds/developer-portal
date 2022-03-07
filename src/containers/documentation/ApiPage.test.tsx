@@ -216,7 +216,7 @@ describe('ApiPage', () => {
             deactivationInfo: {
               ...unmetDeactivationInfo,
               deprecationDate: moment().subtract(1, 'year')
-                                       .format('DD.MM.YYYY HH:mm:ss'),
+                                       .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
             },
           },
         ],
