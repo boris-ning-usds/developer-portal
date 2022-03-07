@@ -7,7 +7,6 @@
  * used in all developer portal environments for health documentation.
  */
 
-import moment from 'moment';
 import { OPEN_API_SPEC_HOST } from '../../types/constants';
 import {
   ArgonautReleaseNotes,
@@ -100,10 +99,10 @@ const healthApis: APIDescription[] = [
   },
   {
     deactivationInfo: {
-      deactivationContent: UrgentCareDeactivationNotice,
-      deactivationDate: moment('20 Jul 2020 00:00 EDT'),
-      deprecationContent: UrgentCareDeprecationNotice,
-      deprecationDate: moment('13 Jul 2020 00:00 EDT'),
+      deactivationContent: UrgentCareDeactivationNotice.toString(),
+      deactivationDate: '20 Jul 2020 00:00 EDT',
+      deprecationContent: UrgentCareDeprecationNotice.toString(),
+      deprecationDate: '13 Jul 2020 00:00 EDT',
     },
     description:
       "The VA's Health Urgent Care Eligibility API supports industry standards (e.g., Fast Healthcare Interoperability Resources [FHIR]) and provides access to a Veteran's urgent care eligibility status.",
@@ -249,11 +248,11 @@ const healthApis: APIDescription[] = [
   },
   {
     deactivationInfo: {
-      deactivationContent: HealthArgonautDeactivationNotice,
+      deactivationContent: HealthArgonautDeactivationNotice.toString(),
       // see the RFC 2822 date format section here: https://momentjs.com/docs/#/parsing/string-format/
-      deactivationDate: moment('01 Oct 2019 00:00 EDT'),
-      deprecationContent: HealthArgonautDeprecationNotice,
-      deprecationDate: moment('15 Sep 2019 00:00 EDT'),
+      deactivationDate: '01 Oct 2019 00:00 EDT',
+      deprecationContent: HealthArgonautDeprecationNotice.toString(),
+      deprecationDate: '15 Sep 2019 00:00 EDT',
     },
     description:
       'Both the legacy API endpoints and this legacy documentation will no longer be accessible beginning Oct 1, 2019.',

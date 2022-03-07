@@ -1,6 +1,5 @@
 /* eslint-disable react/display-name */
 import moment from 'moment';
-import * as React from 'react';
 import { APICategories, APIDeactivationInfo, APIDescription, ProdAccessFormSteps } from '../apiDefs/schema';
 
 export const fakeCategoryOrder: string[] = ['lotr', 'sports'];
@@ -20,10 +19,10 @@ export const fakeCategories: APICategories = {
       },
       {
         deactivationInfo: {
-          deactivationContent: (): JSX.Element => <div>Silmarils lost forever</div>,
-          deactivationDate: moment().subtract(1, 'year'),
-          deprecationContent: (): JSX.Element => <div>Morgoth claims the jewels</div>,
-          deprecationDate: moment().subtract(15, 'months'),
+          deactivationContent: 'Silmarils lost forever',
+          deactivationDate: moment().subtract(1, 'year').format('DD.MM.YYYY HH:mm:ss'),
+          deprecationContent: 'Morgoth claims the jewels',
+          deprecationDate: moment().subtract(15, 'months').format('DD.MM.YYYY HH:mm:ss'),
         },
         description: 'Three pretty gems',
         docSources: [],
@@ -107,15 +106,15 @@ export const extraAPI: APIDescription = {
 };
 
 export const extraDeactivationInfo: APIDeactivationInfo = {
-  deactivationContent: () => <div>deactivated this API</div>,
-  deactivationDate: moment().subtract(3, 'months'),
-  deprecationContent: () => <div>deprecated this API</div>,
-  deprecationDate: moment().subtract(6, 'months'),
+  deactivationContent: 'deactivated this API',
+  deactivationDate: moment().subtract(3, 'months').format('DD.MM.YYYY HH:mm:ss'),
+  deprecationContent: 'deprecated this API',
+  deprecationDate: moment().subtract(6, 'months').format('DD.MM.YYYY HH:mm:ss'),
 };
 
 export const unmetDeactivationInfo: APIDeactivationInfo = {
-  deactivationContent: () => <div data-testid="deactivation-info">This API is deactivated</div>,
-  deactivationDate: moment().add(3, 'months'),
-  deprecationContent: () => <div data-testid="deprecation-info">This API is deprecated</div>,
-  deprecationDate: moment().add(1, 'year'),
+  deactivationContent: 'This API is deactivated',
+  deactivationDate: moment().add(3, 'months').format('DD.MM.YYYY HH:mm:ss'),
+  deprecationContent: 'This API is deprecated',
+  deprecationDate: moment().add(1, 'year').format('DD.MM.YYYY HH:mm:ss'),
 };

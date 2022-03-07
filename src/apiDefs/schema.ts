@@ -5,7 +5,6 @@
  * also not add any more React components to these schema definitions, as that will add to the
  * work that we need to do to convert this schema to a database-based system.
  */
-import * as moment from 'moment';
 import * as PropTypes from 'prop-types';
 
 export interface VeteranRedirectMessage {
@@ -46,10 +45,10 @@ export const ApiDocSourcePropType = PropTypes.shape({
   openApiUrl: PropTypes.string.isRequired,
 });
 export interface APIDeactivationInfo {
-  readonly deprecationContent: React.FunctionComponent;
-  readonly deprecationDate: moment.Moment;
-  readonly deactivationContent: React.FunctionComponent;
-  readonly deactivationDate: moment.Moment;
+  readonly deprecationContent: string;
+  readonly deprecationDate: string;
+  readonly deactivationContent: string;
+  readonly deactivationDate: string;
 }
 
 export const ApiDeactivationInfoPropType = PropTypes.shape({

@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useLocation, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import { isApiDeactivated, isApiDeprecated } from '../../apiDefs/deprecated';
+import ReactMarkdown from 'react-markdown';
 
 import { lookupApiByFragment, lookupApiCategory } from '../../apiDefs/query';
 import { APIDescription } from '../../apiDefs/schema';
@@ -41,7 +42,9 @@ const DeactivationMessage = ({ api }: { api: APIDescription }): JSX.Element | nu
 
   return (
     <div className={classNames('usa-alert', 'usa-alert-info', 'va-api-alert-box')}>
-      <div className={classNames('usa-alert-body')}>{content({})}</div>
+      <div className={classNames('usa-alert-body')}>
+        <ReactMarkdown>{content}</ReactMarkdown>
+      </div>
     </div>
   );
 };

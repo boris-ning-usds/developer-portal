@@ -215,7 +215,7 @@ describe('ApiPage', () => {
             ...lotrRingsApi,
             deactivationInfo: {
               ...unmetDeactivationInfo,
-              deprecationDate: moment().subtract(1, 'year'),
+              deprecationDate: moment().subtract(1, 'year').format('DD.MM.YYYY HH:mm:ss'),
             },
           },
         ],

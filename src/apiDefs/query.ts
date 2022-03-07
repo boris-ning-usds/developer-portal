@@ -44,7 +44,7 @@ const getActiveApiDefinitions = (): APICategories => {
 };
 
 const getAllApis = (): APIDescription[] =>
-  Object.values(getActiveApiDefinitions()).flatMap((category: APICategory) => category.apis)
+  Object.values(getApiDefinitions()).flatMap((category: APICategory) => category.apis)
     .sort((a, b) => (a.name > b.name ? 1 : -1));
 
 const getAllOauthApis = (): APIDescription[] =>

@@ -77,7 +77,7 @@ const APIReleaseNote = ({
       </h2>
       {api.deactivationInfo && isApiDeactivated(api) && (
         <AlertBox headline="Deactivated API" status="info">
-          {api.deactivationInfo.deactivationContent({})}
+          <ReactMarkdown>{api.deactivationInfo.deactivationContent}</ReactMarkdown>
         </AlertBox>
       )}
       <div>
