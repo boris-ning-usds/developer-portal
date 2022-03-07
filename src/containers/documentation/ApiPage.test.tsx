@@ -233,8 +233,8 @@ describe('ApiPage', () => {
     });
 
     it('renders deprecation info', () => {
-      expect(screen.queryByTestId('deprecation-info')).not.toBeNull();
-      expect(screen.queryByTestId('deactivation-info')).toBeNull();
+      expect(screen.queryByText('test-data::: This API is deprecated')).not.toBeNull();
+      expect(screen.queryByText('test-data::: This API is deactivated')).toBeNull();
     });
   });
 });

@@ -117,10 +117,10 @@ export const extraDeactivationInfo: APIDeactivationInfo = {
 };
 
 export const unmetDeactivationInfo: APIDeactivationInfo = {
-  deactivationContent: 'This API is deactivated',
+  deactivationContent: 'test-data::: This API is deactivated',
   deactivationDate: moment().add(3, 'months')
                             .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
-  deprecationContent: 'This API is deprecated',
+  deprecationContent: 'test-data::: This API is deprecated',
   deprecationDate: moment().add(1, 'year')
                            .format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
 };
